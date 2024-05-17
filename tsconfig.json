@@ -1,7 +1,7 @@
 {
   "include": ["index.tsx"],
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "target": "es2018",
     "moduleResolution": "node",
     "declaration": true, // generate .d.ts files

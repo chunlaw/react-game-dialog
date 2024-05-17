@@ -1,6 +1,6 @@
 {
   "name": "react-game-dialog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package to form a clickaway game dialog based on MUI and Markdown",
   "main": "src/index.tsx",
   "module": "src/index.tsx",
