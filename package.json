@@ -25,8 +25,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "lodash.throttle": "^4.1.1",
-    "react-markdown": "^9.0.1"
+    "lodash.throttle": "^4.1.1"
   },
   "peerDependencies": {
     "@emotion/react": "^11.x",
@@ -34,6 +33,7 @@
     "@mui/icons-material": "5.x",
     "@mui/material": "5.x",
     "react": "17.x - 18.x",
+    "react-markdown": "9.x",
     "rehype-raw": "7.x"
   },
   "type": "module",
