@@ -17,14 +17,12 @@ export interface GameDialogProps {
   open: boolean;
   onClose: () => void;
   dialogues: string[];
-  characterUrls?: Record<string, string>;
 }
 
 const GameDialog = ({
   open,
   onClose,
   dialogues,
-  characterUrls = {},
 }: GameDialogProps) => {
   const [page, setPage] = useState<number>(0);
   const variables = useRef<Record<string, boolean>>({});
@@ -56,9 +54,11 @@ const GameDialog = ({
   const characters = useMemo(
     () =>
       dialogues.map((v) => {
+        const avatar = (v.match(/<!-- AVATAR (.*?) -->/) ?? [])[1];
         const character = v.split("\n")[0].replace(/#/g, "").trim();
-        const align = v.match(/__ALIGN_RIGHT__/g) ? "flex-end" : "flex-start";
+        const align = v.match(/<!-- AVATAR_ALIGN_RIGHT -->/g) ? "flex-end" : "flex-start";
         return {
+          avatar,
           character,
           align,
         };
@@ -85,7 +85,7 @@ const GameDialog = ({
         };
       }
     }
-  }, [page, onClose, dialogues]);
+  }, [page, onClose, dialogues, nextPage]);
 
   return (
     <>
@@ -103,11 +103,13 @@ const GameDialog = ({
           >
             <Box
               sx={{
-                backgroundImage: `url(/assets/characters/p${characterUrls[characters[idx].character ?? "00"]}.png)`,
+                backgroundImage: `url(${characters[idx].avatar})`,
                 backgroundSize: "contain",
-                height: "min(45dvh, 45dvw)",
-                width: "min(45dvh, 45dvw)",
+                backgroundRepeat: "no-repeat",
+                height: "min(45dvh, 45dvw, 400px)",
+                width: "min(45dvh, 45dvw, 400px)",
                 alignSelf: characters[idx].align,
+                backgroundPosition: characters[idx].align === "flex-start" ? "left" : "right",
               }}
             />
             <Paper square={false} elevation={16} sx={dialogSx}>

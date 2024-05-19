@@ -1,12 +1,11 @@
 # React Game Dialog
 
-[Demo](https://singerattack.chunlaw.io/)
+The react package is to provide a component to transform Markdown to game dialogs. It is a must to use [Material UI](https://mui.com) to make the component function normallly. [Here is the demo](https://react-game-dialog.chunlaw.io/)
 
 <p align="center">
   <img src="example-preview.jpg" alt="React Game Dialog preview" />
 </p>
 
-The react package is to provide a component to transform Markdown to game dialogs. It is a must to use [Material UI](https://mui.com) to make the component function normallly.
 
 # Installation
 

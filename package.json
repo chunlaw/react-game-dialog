@@ -1,6 +1,6 @@
 {
   "name": "react-game-dialog",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "Package to form a clickaway game dialog based on MUI and Markdown",
   "repository": "https://github.com/chunlaw/react-game-dialog",
   "author": "Chun Law",
@@ -14,7 +14,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --dts --format cjs,esm --clean",
-    "ladle": "ladle serve"
+    "dev": "vite",
+    "predeploy": "tsc && vite build",
+    "deploy": "gh-pages -d demo -f --nojekyll"
   },
   "devDependencies": {
     "@emotion/react": "^11.11.4",
@@ -25,13 +27,25 @@
     "@types/lodash.throttle": "^4.1.9",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "eslint": "8",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "gh-pages": "^6.1.1",
     "lodash.throttle": "^4.1.1",
     "prettier": "^3.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.23.1",
     "tsup": "^8.0.2",
-    "typescript": "^5.2.2"
+    "typescript": "5.0.2",
+    "vite": "^5.2.11",
+    "vite-plugin-eslint": "^1.8.1"
   },
   "peerDependencies": {
     "@emotion/react": "^11.x",
