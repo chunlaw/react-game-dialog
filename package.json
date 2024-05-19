@@ -1,6 +1,6 @@
 {
   "name": "react-game-dialog",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Package to form a clickaway game dialog based on MUI and Markdown",
   "main": "src/index.tsx",
   "module": "src/index.tsx",
@@ -19,25 +19,22 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
-    "@types/react": "^18.2.37",
-    "lodash.throttle": "^4.1.1",
-    "react": "^18.2.0",
-    "react-markdown": "^9.0.1",
-    "rehype-raw": "^7.0.0",
     "@types/lodash.throttle": "^4.1.9",
+    "@types/react": "^18.2.37",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2"
   },
-  "peerDependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.18",
-    "@mui/material": "^5.15.18",
-    "@types/react": "^18.2.37",
+  "dependencies": {
     "lodash.throttle": "^4.1.1",
-    "react": "^18.2.0",
-    "react-markdown": "^9.0.1",
-    "rehype-raw": "^7.0.0"
+    "react-markdown": "^9.0.1"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.x",
+    "@emotion/styled": "11.x",
+    "@mui/icons-material": "5.x",
+    "@mui/material": "5.x",
+    "react": "17.x - 18.x",
+    "rehype-raw": "7.x"
   },
   "type": "module",
   "exports": "./index.tsx"
