@@ -1,1 +1,3 @@
-export * from './game-dialog';
+import GameDialog from './game-dialog';
+
+export default GameDialog;

@@ -13,7 +13,7 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { ArrowDropDown as ArrowDropDownIcon } from "@mui/icons-material";
 
-interface GameDialogProps {
+export interface GameDialogProps {
   open: boolean;
   onClose: () => void;
   dialogues: string[];
