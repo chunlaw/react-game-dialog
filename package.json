@@ -1,37 +1,44 @@
 {
   "name": "react-game-dialog",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Package to form a clickaway game dialog based on MUI and Markdown",
-  "main": "src/index.tsx",
   "module": "src/index.tsx",
   "repository": "https://github.com/chunlaw/react-game-dialog",
   "author": "Chun Law",
   "license": "MIT",
   "private": false,
   "files": [
-    "index.tsx"
+    "dist"
   ],
+  "main": "dist/index.js",
+  "types": "dist.index.d.ts",
   "scripts": {
-    "build": "tsc --build --clean && tsc --build"
+    "build": "tsup",
+    "ladle": "ladle serve"
   },
   "devDependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@ladle/react": "^4.0.3",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
     "@types/lodash.throttle": "^4.1.9",
-    "@types/react": "^18.2.37",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "lodash.throttle": "^4.1.1",
     "prettier": "^3.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "tsup": "^8.0.2",
     "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "lodash.throttle": "^4.1.1"
   },
   "peerDependencies": {
     "@emotion/react": "^11.x",
     "@emotion/styled": "11.x",
     "@mui/icons-material": "5.x",
     "@mui/material": "5.x",
+    "lodash.throttle": "^4.1.1",
     "react": "17.x - 18.x",
     "react-markdown": "9.x",
     "rehype-raw": "7.x"
